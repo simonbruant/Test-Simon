@@ -114,8 +114,7 @@ main {
   transition: var(--transition-speed);
 }
 
-.logo-text
-{
+.logo-text {
   display: inline;
   position: absolute;
   left: -999px;
@@ -167,13 +166,11 @@ main {
     display: inline;
   }
 
-  .navbar:hover .logo svg
-  {
+  .navbar:hover .logo svg {
     margin-left: 11rem;
   }
 
-  .navbar:hover .logo-text
-  {
+  .navbar:hover .logo-text {
     left: 0px;
   }
 }
@@ -213,4 +210,139 @@ main {
 
 .solar #solarIcon {
   display: block;
+}
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
+}
+
+.card {
+  background: #f1777c;
+  min-width: 350px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+  position: relative;
+}
+
+.card .img {
+  width: 80px;
+  height: 80px;
+  background: #fff;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card .img img {
+  width: 40px;
+}
+
+.card h1 {
+  color: #fff;
+  font-size: 20px;
+  margin: 15px 0 6px 0;
+}
+
+.card small {
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  bottom: -18px;
+}
+
+label input {
+  display: none;
+}
+
+label span {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 10px;
+}
+
+label span i {
+  color: #f1777c;
+  cursor: pointer;
+  transition: all 200ms;
+}
+
+label .socialicon {
+  background: #f1777c;
+  min-width: 350px;
+  height: 100px;
+  position: absolute;
+  bottom: -14px;
+  border-radius: 12px;
+  z-index: -1;
+  transition: all 250ms cubic-bezier(0, 1.82, 0.58, 1);
+}
+
+label .socialicon ul {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+label .socialicon ul li {
+  width: 36px;
+  height: 36px;
+  background: #fff;
+  margin: 0 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+label .socialicon ul li a {
+  text-decoration: none;
+}
+
+label .socialicon ul li a i {
+  display: block;
+  text-align: center;
+  line-height: 36px;
+  color: #f1777c;
+}
+
+label input:checked~span i {
+  transform: rotate(182deg);
+}
+
+label input:checked~.socialicon {
+  bottom: -110px;
 }
